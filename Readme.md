@@ -1,4 +1,4 @@
-# [ICCV 2025] LoRD-HOI: Zero-Shot HOI Detection with Low-Rank Decomposed VLM Feature Adaptation
+# [ICCV 2025] HOLa: Zero-Shot HOI Detection with Low-Rank Decomposed VLM Feature Adaptation
 
 ## Paper Links
 
@@ -13,7 +13,7 @@ Follow the process of [UPT](https://github.com/fredzzhang/upt).
 
 The downloaded files should be placed as follows. Otherwise, please replace the default path to your custom locations.
 ```
-|- Lord-HOI
+|- HOLa
 |   |- hicodet
 |   |   |- hico_20160224_det
 |   |       |- annotations
@@ -86,7 +86,7 @@ If you find our paper and/or code helpful, please consider citing :
 ```
 @inproceedings{
 lei2025lordhoi,
-title={LoRD-HOI: Zero-Shot HOI Detection with Low-Rank Decomposed VLM Feature Adaptation},
+title={HOLa: Zero-Shot HOI Detection with Low-Rank Decomposed VLM Feature Adaptation},
 author={Lei, Qinqian and Wang, Bo and Robby T., Tan},
 booktitle={In Proceedings of the IEEE/CVF international conference on computer vision},
 year={2025}
