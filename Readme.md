@@ -3,7 +3,7 @@
 ## Paper Links
 
 <!-- [arXiv](https://arxiv.org/)  -->
-[Project Page](https://chelsielei.github.io/LordHOI_Proj/)
+[Project Page](https://chelsielei.github.io/HOLa_Proj/)
 
 The paper is under camera ready and will be released soon. 
 
