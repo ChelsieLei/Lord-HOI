@@ -33,7 +33,7 @@ The downloaded files should be placed as follows. Otherwise, please replace the 
 **Reminder**: 
 If you have already installed the clip package in your Python environment (e.g., via pip install clip), please ensure that you use the local CLIP directory provided in our EZ-HOI repository instead. To do this, set the  `PYTHONPATH` to include the local CLIP path so that it takes precedence over the installed package.
 ```
-export PYTHONPATH=$PYTHONPATH:"your_path/Lord-HOI/CLIP"
+export PYTHONPATH=$PYTHONPATH:"your_path/HOLa/CLIP"
 ```
 So that you can use the local clip **without uninstall the clip of your python env**.
 
@@ -85,7 +85,7 @@ Extraction code: yawa
 If you find our paper and/or code helpful, please consider citing :
 ```
 @inproceedings{
-lei2025lordhoi,
+lei2025hola,
 title={HOLa: Zero-Shot HOI Detection with Low-Rank Decomposed VLM Feature Adaptation},
 author={Lei, Qinqian and Wang, Bo and Robby T., Tan},
 booktitle={In Proceedings of the IEEE/CVF international conference on computer vision},
