@@ -75,7 +75,13 @@ bash scripts/vcoco.sh
 | HICO-DET |default| ResNet-50+ViT-B  | 35.41|34.35|35.73|
 | HICO-DET |default| ResNet-50+ViT-L  | 39.05|38.66|39.17|
 
-You can download our pretrained model checkpoints using the following link:  
+
+You can download our pretrained model checkpoints using the following link from Google Drive:  
+```
+https://drive.google.com/drive/folders/1kH-yOi-YqdB35rSgKoRkmg_pGbyFEkUX?usp=sharing
+```
+
+You can also download our pretrained model checkpoints using the following Kuake link:  
 ```
 Link: https://pan.quark.cn/s/c3f30b122ed2 
 Extraction code: yawa
