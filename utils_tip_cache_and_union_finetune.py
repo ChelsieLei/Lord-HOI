@@ -177,41 +177,7 @@ class DataFactory(Dataset):
             else:
                 for corr in class_corr:
                     if corr[0] not in self.filtered_hoi_idx:
-                        self.zs_object_to_target[corr[1]].append(corr[2])
-        
-        if self.name == 'hicodet' and self.partition == 'train2015':
-            file_path = ("/mnt/disk2/qinqian/ADA-CM/hico_txt_llava/train_hico_descrip_train.txt")
-            with open(file_path, 'r') as file:
-                lines = file.readlines()
-                lines = [line.rstrip() for line in lines if line.rstrip()]
-        elif self.name == 'hicodet' and self.partition == 'test2015':
-            file_path = ("/mnt/disk2/qinqian/ADA-CM/hico_txt_llava/train_hico_descrip_test.txt")
-
-        elif self.name == 'vcoco' and self.partition == 'trainval':
-            file_path = ("/mnt/disk2/qinqian/ADA-CM/hico_txt_llava/train_vcoco_trainval.txt")
-
-        elif self.name == 'vcoco' and self.partition == 'test':
-            file_path = ("/mnt/disk2/qinqian/ADA-CM/hico_txt_llava/train_vcoco_test.txt")
-
-        with open(file_path, 'r') as file:
-            lines = file.readlines()
-            lines = [line.rstrip() for line in lines if line.rstrip()]
-
-        self.hico_txt_description = {}
-        cur_key = ''
-        for l_idx,line_i in enumerate(lines):
-            if self.name == 'hicodet':
-                if 'HICO' in line_i and '.jpg' in line_i:
-                    cur_key = line_i
-                    self.hico_txt_description[cur_key] = ''
-                else:
-                    self.hico_txt_description[cur_key] += line_i + ' '
-            elif self.name == 'vcoco':
-                if 'COCO' in line_i and '.jpg' in line_i:
-                    cur_key = line_i
-                    self.hico_txt_description[cur_key] = ''
-                else:
-                    self.hico_txt_description[cur_key] += line_i + ' '            
+                        self.zs_object_to_target[corr[1]].append(corr[2])        
 
         
     def __len__(self):
@@ -258,18 +224,11 @@ class DataFactory(Dataset):
         image_clip, target = self.normalize(image_clip, target)
         target['filename'] = filename
 
-        tnt_dep = self.hico_txt_description[filename][:300]
-        quit_len = len(tnt_dep.split(".")[-1])
-        if quit_len > 0:
-            tnt_dep = tnt_dep[:-quit_len]
-        target['text_descrip'] = tnt_dep
-        # print(filename, target['text_descrip'])
         return (image,image_clip), target
         image_0, target_0 = self.transforms[0](image, target)
         image, _ = self.transforms[1](image_0, None)
-        # pdb.set_trace()
+
         target_0['valid_size'] = torch.as_tensor(image.shape[-2:])
-        # pdb.set_trace()
         image_clip, target = self.transforms[3](image_0, target_0) # resize 
         image_clip, target = self.transforms[2](image_clip, target) # normlize
         if image_0.size[-1] >1344 or image_0.size[-2] >1344:print(image_0.size)
