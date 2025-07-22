@@ -2,10 +2,10 @@
 
 ## Paper Links
 
-<!-- [arXiv](https://arxiv.org/)  -->
+[arXiv](https://arxiv.org/abs/2507.15542) 
 [Project Page](https://chelsielei.github.io/HOLa_Proj/)
 
-The paper is under camera ready and will be released soon. 
+
 
 
 ## Dataset 
