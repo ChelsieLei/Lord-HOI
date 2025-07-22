@@ -32,7 +32,7 @@ import torch.multiprocessing as mp
 from torch.utils.data import DataLoader, DistributedSampler
 from torchvision.ops.boxes import box_iou
 sys.path.append('detr')
-from loardhoi_model import build_detector
+from hola_model import build_detector
 from utils_tip_cache_and_union_finetune import custom_collate, CustomisedDLE, DataFactory
 import pdb
 from hico_text_label import hico_unseen_index
