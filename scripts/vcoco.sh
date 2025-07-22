@@ -2,7 +2,7 @@
 CUDA_VISIBLE_DEVICES=0,1,2,3 python main_tip_finetune.py --world-size 4 \
     --dataset vcoco --data-root vcoco/ --partitions trainval test \
     --pretrained  checkpoints/detr-r50-vcoco.pth \
-    --output-dir checkpoints/vcoco_HO_adpt_default/lordhoi \
+    --output-dir checkpoints/vcoco_HO_adpt_default/hola \
     --use_insadapter \
     --num_classes 24 \
     --use_multi_hot \
